@@ -1,9 +1,11 @@
 version: '2'
 services:
   ubuntujenkins:
-    build: ubuntujenkins
+    image: jenkins:2.0
     links:
       - mysql:mysql
+    ports:
+      - 8080:8080
   mysql:
     image: mysql/mysql-server
     environment:
