@@ -1,0 +1,14 @@
+version: '2'
+services:
+  ubuntujenkins:
+    build: ubuntujenkins
+    links:
+      - mysql:mysql
+  mysql:
+    image: mysql/mysql-server
+    environment:
+      - MYSQL_DATABASE=toto
+      - MYSQL_USER=ic06
+      - MYSQL_PASSWORD=ic06
+      - MYSQL_ROOT_PASSWORD=ic06
+
