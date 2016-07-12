@@ -1,7 +1,7 @@
 version: '2'
 services:
   ubuntujenkins:
-    image: jenkins:2.0
+    image: vincentravera/jenkinsdemo
     links:
       - mysql:mysql
     ports:
